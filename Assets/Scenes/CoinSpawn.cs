@@ -20,7 +20,7 @@ public class CoinSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnCoin", 5, 2);
+        InvokeRepeating("Spawner", 5, 2);
 
         spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
 

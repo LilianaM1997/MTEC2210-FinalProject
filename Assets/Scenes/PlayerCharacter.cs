@@ -9,6 +9,7 @@ public class PlayerCharacter : MonoBehaviour
     private Rigidbody2D rb;
     public float jump;
     public AudioSource audioPlayer;
+    public GameObject headChecker;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,8 @@ public class PlayerCharacter : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
+            headChecker.SetActive(true);
+            
             rb.AddForce(new Vector2(rb.velocity.x, jump));
         }
     }
@@ -32,7 +35,7 @@ public class PlayerCharacter : MonoBehaviour
         if (collision.gameObject.tag == "coin")
         {
             
-            audioPlayer.Play();
+           // audioPlayer.Play();
 
 
         }
